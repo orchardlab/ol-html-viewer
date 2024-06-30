@@ -32,6 +32,22 @@ Using it in your HTML by passing HTML string to `<div slot="content">YOUR-ESCAPE
 </ol-html-viewer>
 ```
 
+You could also set the `htmlString` property of `ol-html-viewer` element.
+
+```html
+<ol-html-viewer id="js-weekly-newsletter"> </ol-html-viewer>
+<script type="module">
+    // here we load the html
+    const result = await fetch("./js-weekly-newsletter.html").then(
+        (s) => s.text(),
+    );
+    const htmlViewer = document.getElementById(
+        "js-weekly-newsletter",
+    );
+    htmlViewer.htmlString = result;
+</script>
+```
+
 ## Example page
 
 [Example page](https://orchardlab.github.io/ol-html-viewer/example/)
