@@ -1,0 +1,4 @@
+/* Critical styles to solve "Flash of Unstyled Content" or FOUC */
+ol-html-viewer [slot="content"] {
+    display: none;
+}
