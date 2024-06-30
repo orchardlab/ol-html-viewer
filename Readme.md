@@ -56,3 +56,7 @@ You could also set the `htmlString` property of `ol-html-viewer` element.
 - Prevent styles in HTML leaking to the global
 - Remove tracking pixels
 - Image toggle
+
+## TODOs
+[] Remove `onclick` handlers
+[] Expose slot styles for toggle button
