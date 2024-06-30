@@ -2,10 +2,23 @@ export class HTMLViewer extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+    this._htmlString = ""; // Private property to store the HTML string
 
     // Initialize shadow DOM with a hidden slot element
     this.shadowRoot.innerHTML = `
          <style>
+          :host {
+                 --ol-html-viewer-border: 1px solid #eee;
+                 --ol-html-viewer-padding: 10px;
+                 --ol-html-viewer-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                 --ol-html-viewer-border-radius: 10px;
+
+                 display: block;
+                 border: var(--ol-html-viewer-border);
+                 padding: var(--ol-html-viewer-padding);
+                 box-shadow: var(--ol-html-viewer-shadow);
+                 border-radius: var(--ol-html-viewer-border-radius);
+          }
            slot[name="content"] {
              display: none;
            }
@@ -20,6 +33,17 @@ export class HTMLViewer extends HTMLElement {
         </div>
          <slot name="content"></slot>
        `;
+  }
+
+  // Getter for htmlString
+  get htmlString() {
+    return this._htmlString;
+  }
+
+  // Setter for htmlString
+  set htmlString(value) {
+    this._htmlString = value;
+    this.processHTMLString(value);
   }
 
   connectedCallback() {
