@@ -10,7 +10,7 @@
     "example": "npx http-server"
   },
   "author": "Mike Li",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@testing-library/dom": "^10.2.0",
     "ava": "^6.1.3",

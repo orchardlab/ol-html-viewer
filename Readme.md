@@ -58,5 +58,5 @@ You could also set the `htmlString` property of `ol-html-viewer` element.
 - Image toggle
 
 ## TODOs
-[] Remove `onclick` handlers
-[] Expose slot styles for toggle button
+[ ] Remove `onclick` handlers
+[ ] Expose slot styles for toggle button
