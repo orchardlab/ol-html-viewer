@@ -56,3 +56,29 @@ test("should toggle images on checkbox change", (t) => {
 
   t.true(t.context.element.hasAttribute("block-images"));
 });
+
+test("should render content when htmlString property is set", async (t) => {
+  const viewer = document.createElement("html-viewer");
+  document.body.appendChild(viewer);
+
+  viewer.htmlString =
+    "<h1>Test Header</h1><p>Test Paragraph</p><img src='http://example.com/test.jpg'>";
+
+  // Wait for the component to process the HTML string
+  await waitFor(() => {
+    const content = viewer.shadowRoot.querySelector("div");
+    return content && content.innerHTML.includes("Test Header");
+  });
+
+  const content = viewer.shadowRoot;
+
+  t.truthy(content);
+  t.regex(content.innerHTML, /Test Header/);
+  t.regex(content.innerHTML, /Test Paragraph/);
+
+  const img = content.querySelector("img");
+  t.truthy(img);
+  t.is(img.src, "https://example.com/test.jpg");
+
+  document.body.removeChild(viewer);
+});
