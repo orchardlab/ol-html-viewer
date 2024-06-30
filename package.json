@@ -1,9 +1,10 @@
 {
   "name": "ol-html-viewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple HTML viewer web component",
   "main": "index.js",
   "type": "module",
+  "files": ["Readme.md", "html-viewer.js", "styles.css"],
   "scripts": {
     "test": "ava",
     "example": "npx http-server"
