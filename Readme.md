@@ -32,6 +32,10 @@ Using it in your HTML by passing HTML string to `<div slot="content">YOUR-ESCAPE
 </ol-html-viewer>
 ```
 
+## Example page
+
+[Example page](https://orchardlab.github.io/ol-html-viewer/example/)
+
 ## Features
 - Prevent styles in HTML leaking to the global
 - Remove tracking pixels
