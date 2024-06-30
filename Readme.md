@@ -9,10 +9,10 @@ Loading and define `ol-html-viewer` web component:
 
 ```html
 <!-- Critical styles to solve "Flash of Unstyled Content" or FOUC -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orchardlab/ol-html-viewer@v1.0.1/styles.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orchardlab/ol-html-viewer@v1.0.2/styles.css" type="text/css" />
 <!-- Register ol-html-viewer -->
 <script type="module">
-    import { HTMLViewer } from "https://cdn.jsdelivr.net/gh/orchardlab/ol-html-viewer@v1.0.1/html-viewer.js";
+    import { HTMLViewer } from "https://cdn.jsdelivr.net/gh/orchardlab/ol-html-viewer@v1.0.2/html-viewer.js";
     customElements.define("ol-html-viewer", HTMLViewer);
 </script>
 ```
